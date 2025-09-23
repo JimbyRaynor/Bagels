@@ -1,6 +1,9 @@
 function GlobalVar()
 {
 	
+global.scrolltext = "Originally written in basic in the early 1970s by Diane Resek and Pete Rowe at the Lawrence Hall of Science, Berkeley, California. "	
+global.scrolltext += "Adapted From the book 101 Basic Games, Creative Computing (1973)."
+	
 	
 global.screentext = ds_list_create();
 global.inputtext = ""

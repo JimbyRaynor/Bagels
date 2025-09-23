@@ -2,7 +2,8 @@
 
 
 function ColourChar(xloc, yloc, coord_array, mycolor,charsize,solid) {
-    for (var i = 0; i < array_length(coord_array); i++) {
+    for (var i = 0; i < array_length(coord_array); i++) 
+	{
         var xs = xloc+coord_array[i][0] * charsize;
         var ys = yloc+ coord_array[i][1] * charsize;
 		draw_set_color(c_black);
@@ -14,22 +15,13 @@ function ColourChar(xloc, yloc, coord_array, mycolor,charsize,solid) {
 		}
 		else
 		{
-		 //draw_rectangle(xs+1, ys+1, xs + charsize-1, ys + charsize-1, true);
-	
-		 if (charsize ==2)
-		 { draw_point(xs+1,ys)
-		 }
-		else if ((charsize > 2) and (charsize <= 4))
-		 {
-		  draw_point(xs+1,ys-1)
-		   draw_point(xs+2,ys)
-		  draw_point(xs+2,ys-1)
-		 }
-		else if (charsize > 4)
-		 {
-			 draw_rectangle(xs+1, ys+1, xs + charsize-1, ys + charsize-1,false)
-		 }
-		}
+		   if (charsize ==2)
+	     	      {  draw_rectangle(xs+1, ys+1, xs + charsize, ys + charsize, false);}
+		  else if (charsize == 3)
+		         { draw_rectangle(xs+1, ys+1, xs + charsize-1, ys + charsize-1,true) }
+		 else if (charsize >= 4)
+		          { draw_rectangle(xs+1, ys+1, xs + charsize-1, ys + charsize-1,false) }
+	   }
     }
 }
 
@@ -90,10 +82,10 @@ function ColourText(xloc, ys, mytext, colour, charwidth,charsize,solid)
                     createCharBlockColour2(canvas, xpos, y, colour, charQuestionMark, LEDpoints, solid, bg);
                     break;
                 case "(":
-                    createCharBlockColour2(canvas, xpos, y, colour, LEFTBRACKET, LEDpoints, solid, bg);
+				    ColourChar( xs, ys, global.LEFTBRACKET, colour,charsize,solid);
                     break;
                 case ")":
-                    createCharBlockColour2(canvas, xpos, y, colour, RIGHTBRACKET, LEDpoints, solid, bg);
+				    ColourChar( xs, ys, global.RIGHTBRACKET, colour,charsize,solid);
                     break;
                 case "=":
                     createCharBlockColour2(canvas, xpos, y, colour, EQUALS, LEDpoints, solid, bg);

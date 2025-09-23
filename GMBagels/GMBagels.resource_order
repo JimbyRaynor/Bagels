@@ -17,9 +17,12 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"ObjbtnNum","order":3,"path":"objects/ObjbtnNum/ObjbtnNum.yy",},
     {"name":"ObjGameInit","order":2,"path":"objects/ObjGameInit/ObjGameInit.yy",},
+    {"name":"ObjScrollText","order":5,"path":"objects/ObjScrollText/ObjScrollText.yy",},
     {"name":"GameLogic","order":2,"path":"scripts/GameLogic/GameLogic.yy",},
     {"name":"GlobalVar","order":1,"path":"scripts/GlobalVar/GlobalVar.yy",},
+    {"name":"sprbtn","order":4,"path":"sprites/sprbtn/sprbtn.yy",},
     {"name":"sprLED","order":1,"path":"sprites/sprLED/sprLED.yy",},
   ],
 }

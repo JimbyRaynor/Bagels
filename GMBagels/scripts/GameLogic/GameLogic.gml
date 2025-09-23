@@ -39,7 +39,7 @@ function convertstringtodigits(ad)
 
 function printinputtext()
 {
-  ColourText(860,300,global.inputtext,global.inputcolour,26,3,false);
+  ColourText(700,330,global.inputtext,c_white,48,6,false);
 }
 
 function addtext(mytext)
@@ -62,6 +62,7 @@ for (var i = 2; i <= 3; i++)
         }
     }
 }
+
 
 function GameLogic()
 {
@@ -115,4 +116,27 @@ for (var j = 1; j <= 2; j++)
             }
 }
 
+function EnterNumber(numstr)
+{
+      if (string_length(global.inputtext) == 3)
+	   { global.inputtext = "" }
+	 global.inputcolour = #98FB98
+	 global.inputtext = global.inputtext + numstr	
+	 if (string_length(global.inputtext) == 3)
+	 {
+		  convertstringtodigits(global.inputtext)
+		  if (userrepeatfound())
+                {
+					global.extrahelp = true
+					global.inputcolour = c_gray
+                }
+		else
+		{
+			global.extrahelp = false
+			 global.guessnumber++
+			 global.inputcolour = c_gray
+			 GameLogic()
+		}
+	 }
+}
 

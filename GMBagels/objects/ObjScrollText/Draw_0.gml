@@ -1,0 +1,1 @@
+ColourText(x,y,global.scrolltext,#98FB98,24,3,false);
