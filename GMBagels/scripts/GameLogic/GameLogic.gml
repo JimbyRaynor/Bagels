@@ -109,15 +109,19 @@ for (var j = 1; j <= 2; j++)
             }
 			 addtext( global.inputtext + ":"+outputtext)
 
-
 			if (d == 3)
             {
                 addtext("You got it")
+				addtext("in "+string(global.guessnumber)+ " guesses.")
+				addtext("Refresh your browser")
+				addtext("to start again.")
+				global.gameover = true
             }
 }
 
 function EnterNumber(numstr)
 {
+      if (global.gameover == true) {return}
       if (string_length(global.inputtext) == 3)
 	   { global.inputtext = "" }
 	 global.inputcolour = #98FB98
@@ -127,16 +131,15 @@ function EnterNumber(numstr)
 		  convertstringtodigits(global.inputtext)
 		  if (userrepeatfound())
                 {
-					global.extrahelp = true
 					global.inputcolour = c_gray
                 }
 		else
-		{
-			global.extrahelp = false
-			 global.guessnumber++
-			 global.inputcolour = c_gray
-			 GameLogic()
-		}
+		      {
+			    global.inputcolour = c_gray
+			    GameLogic()
+				if (global.gameover ==  false)
+				    {global.guessnumber++}
+		       }
 	 }
 }
 
