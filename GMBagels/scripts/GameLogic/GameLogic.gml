@@ -109,7 +109,7 @@ for (var j = 1; j <= 2; j++)
             }
 			 addtext( global.inputtext + ":"+outputtext)
 
-			if (d == 3)
+			if (d ==  3)    // d == 3
             {
                 addtext("You got it")
 				addtext("in "+string(global.guessnumber)+ " guesses.")
@@ -132,13 +132,18 @@ function EnterNumber(numstr)
 		  if (userrepeatfound())
                 {
 					global.inputcolour = c_gray
+					global.errorRepeats = true;
                 }
 		else
 		      {
+			    global.errorRepeats = false;
 			    global.inputcolour = c_gray
 			    GameLogic()
 				if (global.gameover ==  false)
-				    {global.guessnumber++}
+				    {
+					 global.guessnumber++
+					 global.totalguesses++
+					 }
 		       }
 	 }
 }

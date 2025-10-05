@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"ObjGameInit",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":3,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"ObjTextInstructions",
+  "eventList":[],
   "managed":true,
-  "name":"ObjGameInit",
+  "name":"ObjTextInstructions",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprInstructions",
+    "path":"sprites/sprInstructions/sprInstructions.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

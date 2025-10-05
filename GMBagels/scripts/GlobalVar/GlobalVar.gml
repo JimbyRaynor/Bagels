@@ -2,45 +2,18 @@ function createtextsurfaces()
 {
 			
 var scrolltext = "                                             Originally written in basic in the early 1970s by Diane Resek and Pete Rowe at the Lawrence Hall of Science, Berkeley, California. "	
-scrolltext += "Adapted From the book 101 Basic Games, Creative Computing (1973)."
-
-
+scrolltext += "Adapted From the book 101 Basic Games, Creative Computing (1973),  written by David H. Ahl."
 
 global.scrollsurface = -1 // scrolling text
 if (!surface_exists(global.scrollsurface))
 {
    global.scrollsurface = surface_create(string_length(scrolltext)*24	, 50);
-   show_debug_message(surface_get_width(global.scrollsurface))
+   //show_debug_message(surface_get_width(global.scrollsurface))
 	surface_set_target(global.scrollsurface);
     ColourText(0,0,scrolltext,#98FB98,24,3,false);	
 	surface_reset_target();
 }
 	
-	
-global.textsurface = -1 // instructions
-if (!surface_exists(global.textsurface)) {
-    global.textsurface = surface_create(1800, 1800);
-	// show_debug_message(surface_get_width(global.textsurface))
-	surface_set_target(global.textsurface);
-
-var dy = -50
-var dx = 40
-ColourText(10,70,"BAGELS",#98FB98,78,11,false);
-ColourText(500+dx,70+dy,"instructions",#98FB98,24,3,false);
-ColourText(500+dx,100+dy,"I am thinking of a three digit number",#98FB98,16,2,false);
-ColourText(500+dx,120+dy,"Try to guess my number",#98FB98,16,2,false);
-ColourText(500+dx,140+dy,"I will give you clues as follows",#98FB98,16,2,false);
-ColourText(500+dx,160+dy,"pico  -  one digit correct but in the wrong position",#98FB98,16,2,false);
-ColourText(500+dx,180+dy,"fermi  - one digit correct in the correct position",#98FB98,16,2,false);
-ColourText(500+dx,200+dy,"bagels - no digits correct",#98FB98,16,2,false);
-ColourText(500+dx,260+dy,"Input three digits from 0 to 9",#98FB98,16,2,false);
-ColourText(500+dx,280+dy,"No two digits are the same",#98FB98,16,2,false);
-ColourText(500+dx,300+dy,"First digit is not 0",#90EE90,16,2,false);
-
-// Reset drawing target back to the screen
-surface_reset_target();
-}
-
 }  // drawtextsurfaces()
 	
 function GlobalVar()
@@ -49,12 +22,15 @@ global.scroll_x  = 0
 global.screentext = ds_list_create();
 global.inputtext = ""
 global.guessnumber = 1
+global.totalguesses = 0
+global.gamenumber = 1
 global.A = [0,0,0,0]  // random digits chosen by computer
 global.B = [0,0,0,0] // our guess digits
 global.y = 0 // number of games won
 global.extrahelp = false;
 global.inputcolour = c_gray
 global.gameover = false;
+global.errorRepeats = false;
 
 global.ONE = [
     [1,6], [2,1], [2,6], [3,0], [3,1], [3,2], [3,3], [3,4], [3,5], [3,6],

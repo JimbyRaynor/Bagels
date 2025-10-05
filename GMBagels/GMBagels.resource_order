@@ -20,9 +20,13 @@
     {"name":"ObjbtnNum","order":3,"path":"objects/ObjbtnNum/ObjbtnNum.yy",},
     {"name":"ObjGameInit","order":2,"path":"objects/ObjGameInit/ObjGameInit.yy",},
     {"name":"ObjScrollText","order":5,"path":"objects/ObjScrollText/ObjScrollText.yy",},
+    {"name":"ObjTextInstructions","order":7,"path":"objects/ObjTextInstructions/ObjTextInstructions.yy",},
+    {"name":"ObjTextTitle","order":6,"path":"objects/ObjTextTitle/ObjTextTitle.yy",},
     {"name":"GameLogic","order":2,"path":"scripts/GameLogic/GameLogic.yy",},
     {"name":"GlobalVar","order":1,"path":"scripts/GlobalVar/GlobalVar.yy",},
     {"name":"sprbtn","order":4,"path":"sprites/sprbtn/sprbtn.yy",},
+    {"name":"sprInstructions","order":2,"path":"sprites/sprInstructions/sprInstructions.yy",},
     {"name":"sprLED","order":1,"path":"sprites/sprLED/sprLED.yy",},
+    {"name":"sprTitle2","order":1,"path":"sprites/sprTitle2/sprTitle2.yy",},
   ],
 }

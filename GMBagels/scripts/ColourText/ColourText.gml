@@ -60,6 +60,7 @@ function ColourText(xloc, ys, mytext, colour, charwidth,charsize,solid)
                     break;
                 case ".":
                     AdjustPos -= 2 * charwidth / 8;
+					xs = xs - 2 * charwidth / 8
 					ColourChar( xs, ys, global.charDot, colour,charsize,solid);
                     break;
                 case ":":
@@ -115,7 +116,7 @@ function printscreen()
 	   }
 	    for (var i = startline; i < linestoprint; i++) 
 		{
-			ColourText(20,200+(i-startline)*30,ds_list_find_value(global.screentext, i),#98FB98,26,3,false);
+			ColourText(20,100+(i-startline)*30,ds_list_find_value(global.screentext, i),#98FB98,26,3,false);
 		}
 }
 
