@@ -14,7 +14,7 @@ if (!surface_exists(global.scrollsurface))
 	surface_reset_target();
 }
 	
-}  // drawtextsurfaces()
+}  // createtextsurfaces()
 	
 function GlobalVar()
 {

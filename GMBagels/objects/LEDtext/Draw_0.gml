@@ -8,8 +8,8 @@ if (global.errorRepeats == true)
 	ColourText(880,340,"Error: repeated digits ",c_white,16,2,false);
 }
 
-ColourText(1200,10,"Game "+string(global.gamenumber),#98FB98,9,1,true);
-ColourText(1200,20,"Total Guesses "+string(global.totalguesses),#98FB98,9,1,true);
+ColourText(1170,5,"Wins "+string(global.gamenumber),#98FB98,16,2,true);
+ColourText(1170,25,"Total Guesses "+string(global.totalguesses),#98FB98,9,1,true);
 var avg= global.totalguesses/global.gamenumber
 var strn1 = string(round(avg))
 var strn2 = string(frac(avg))

@@ -113,9 +113,9 @@ for (var j = 1; j <= 2; j++)
             {
                 addtext("You got it")
 				addtext("in "+string(global.guessnumber)+ " guesses.")
-				addtext("Refresh your browser")
-				addtext("to start again.")
 				global.gameover = true
+				global.gamenumber++
+				 global.totalguesses++
             }
 }
 
@@ -137,7 +137,8 @@ function EnterNumber(numstr)
 		else
 		      {
 			    global.errorRepeats = false;
-			    global.inputcolour = c_gray
+			    global.inputcolour = c_gray;
+				SaveState()
 			    GameLogic()
 				if (global.gameover ==  false)
 				    {

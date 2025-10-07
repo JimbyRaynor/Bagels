@@ -1,0 +1,10 @@
+Room Navigation
+
+Scroll wheel  : vertical pan
+SHIFT scroll wheel : horizontal pan
+    OR Middlemouse button to pan around room
+    OR Hold space and click LMB and drag
+
+
+Look at video "The Complete Guide to the Room Editor in GameMaker",
+                            last section

@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"ObjGameInit",
+  "%Name":"objbtnNewGame",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":3,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"ObjGameInit",
+  "name":"objbtnNewGame",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprbtnNewGame",
+    "path":"sprites/sprbtnNewGame/sprbtnNewGame.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
