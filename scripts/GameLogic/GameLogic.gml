@@ -37,15 +37,7 @@ function convertstringtodigits(ad)
     return true;
 }
 
-function printinputtext()
-{
-  ColourText(700,330,global.inputtext,c_white,48,6,false);
-}
 
-function addtext(mytext)
-{
-	ds_list_add(global.screentext, mytext);
-}
 
 
 function GameLogicStart()

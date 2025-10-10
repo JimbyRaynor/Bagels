@@ -1,20 +1,14 @@
-function createtextsurfaces()
+function GlobalVar()
 {
-			
 global.scrolltext = "                                             Originally written in basic in the early 1970s by Diane Resek and Pete Rowe at the Lawrence Hall of Science, Berkeley, California. "	
 global.scrolltext += "Adapted From the book 101 Basic Games, Creative Computing (1973),  written by David H. Ahl."
 
 global.scrollsurface = -1 // scrolling text
 // create this surface in draw event of ObjGameInit
 
-
 global.retroscreensurface = -1 // dynamic text display
-// create this surface in draw event of ObjGameInit
-	
-}  // createtextsurfaces()
-	
-function GlobalVar()
-{
+// create this surface in draw event of ObjGameInit	
+		
 global.scroll_x  = 0
 global.screentext = ds_list_create();
 global.inputtext = ""
@@ -324,7 +318,5 @@ global.charQ = [
     [6,0],[6,1],[6,2],[6,3],[6,4],[6,5],[6,6],
     [6,7],[7,7]
 ];
-
-createtextsurfaces()
 
 }

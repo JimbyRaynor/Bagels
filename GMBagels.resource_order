@@ -17,7 +17,6 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
-    {"name":"Navigation keys","order":10,"path":"notes/Navigation keys/Navigation keys.yy",},
     {"name":"ObjbtnClearStats","order":2,"path":"objects/ObjbtnClearStats/ObjbtnClearStats.yy",},
     {"name":"objbtnClose","order":1,"path":"objects/objbtnClose/objbtnClose.yy",},
     {"name":"objbtnNewGame","order":8,"path":"objects/objbtnNewGame/objbtnNewGame.yy",},
