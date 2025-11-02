@@ -8,6 +8,7 @@ GameLogicStart()
 ds_list_clear(global.screentext);
 
 room_goto(rmMain)
+printscreen()
 
 
 //Draw

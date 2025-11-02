@@ -5,11 +5,13 @@ global.inputtext = ""
 global.gameover = false;
 global.errorRepeats = false;
 
+SaveState()
 
 GameLogicStart()
 ds_list_clear(global.screentext);
 
 room_goto(rmMain)
+printscreen()
 
 // Draw
 //ColourText(x+15,y+15,"Clear Stats",#98FB98,20,3,false);

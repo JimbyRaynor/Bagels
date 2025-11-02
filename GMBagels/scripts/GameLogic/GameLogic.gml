@@ -37,21 +37,11 @@ function convertstringtodigits(ad)
     return true;
 }
 
-function printinputtext()
-{
-  ColourText(700,330,global.inputtext,c_white,48,6,false);
-}
 
-function addtext(mytext)
-{
-	ds_list_add(global.screentext, mytext);
-}
 
 
 function GameLogicStart()
 {
-randomize();
-
 global.A[1] = irandom_range(1, 9); // First digit not 0
 for (var i = 2; i <= 3; i++) 
      {
@@ -97,26 +87,27 @@ for (var j = 1; j <= 2; j++)
 			var outputtext = ""
             if (c == 0 and d == 0)
             {
-               outputtext = "Bagels"
+               outputtext = "BAGELS"
             }
             for (var j = 1; j <= c; j++)
             {
-                outputtext = outputtext +"Pico "
+                outputtext = outputtext +"PICO "
             }
             for (var j = 1; j <= d; j++)
             {
-               outputtext = outputtext + "Fermi ";
+               outputtext = outputtext + "FERMI ";
             }
 			 addtext( global.inputtext + ":"+outputtext)
-
 			if (d ==  3)    // d == 3
             {
-                addtext("You got it")
-				addtext("in "+string(global.guessnumber)+ " guesses.")
-				global.gameover = true
-				global.gamenumber++
-				 global.totalguesses++
+                addtext("YOU GOT IT")
+				addtext("IN "+string(global.guessnumber)+ " GUESSES.")
+				global.gameover = true;
+				global.gamenumber++;
+				 global.totalguesses++;
+				 SaveState();
             }
+		   printscreen();
 }
 
 function EnterNumber(numstr)

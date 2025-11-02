@@ -1,11 +1,8 @@
-GlobalVar()
-ini_open("bagelsdata.ini");
-global.totalguesses=ini_read_real("stats","TotalGuesses",1)
-global.gamenumber = ini_read_real("stats","TotalGames",0 )
-ini_close()
+// all scripts like GlobalVar are exceuted first, before anything else in the game
 
+LoadState(); // defined in script GameGeneral
+ // loads total number of guesses, etc
+ 
+GameLogicStart(); // defined in script GameLogic
+// start the game
 
-//global.totalguesses = 0
-//global.gamenumber = 0
-
-global.gamenumber++

@@ -1,7 +1,7 @@
 {
   "$GMNotes":"v1",
-  "%Name":"Navigation keys",
-  "name":"Navigation keys",
+  "%Name":"HTML background colour",
+  "name":"HTML background colour",
   "parent":{
     "name":"Notes",
     "path":"folders/Notes.yy",

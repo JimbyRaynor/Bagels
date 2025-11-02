@@ -1,23 +1,18 @@
-function createtextsurfaces()
-{
-			
-var scrolltext = "                                             Originally written in basic in the early 1970s by Diane Resek and Pete Rowe at the Lawrence Hall of Science, Berkeley, California. "	
-scrolltext += "Adapted From the book 101 Basic Games, Creative Computing (1973),  written by David H. Ahl."
+// All Scripts like GlobalVar are executed before anything else in the game
+
+randomize(); // randomize seed so that we get different random numbers each time we start the game
+
+global.scrolltext = "                                             Originally written in basic in the early 1970s by Diane Resek and Pete Rowe at the Lawrence Hall of Science, Berkeley, California. "	
+global.scrolltext += "Adapted From the book 101 Basic Games, Creative Computing,1973, David H. Ahl."
+global.scrolltext = string_upper(global.scrolltext)
+
 
 global.scrollsurface = -1 // scrolling text
-if (!surface_exists(global.scrollsurface))
-{
-   global.scrollsurface = surface_create(string_length(scrolltext)*24	, 50);
-   //show_debug_message(surface_get_width(global.scrollsurface))
-	surface_set_target(global.scrollsurface);
-    ColourText(0,0,scrolltext,#98FB98,24,3,false);	
-	surface_reset_target();
-}
-	
-}  // createtextsurfaces()
-	
-function GlobalVar()
-{
+// create this surface in draw event of ObjGameInit
+
+global.retroscreensurface = -1 // dynamic text display
+// create this surface in draw event of ObjGameInit	
+		
 global.scroll_x  = 0
 global.screentext = ds_list_create();
 global.inputtext = ""
@@ -31,6 +26,27 @@ global.extrahelp = false;
 global.inputcolour = c_gray
 global.gameover = false;
 global.errorRepeats = false;
+
+global.fntRetro3 = font_add_sprite_ext(sprfontRetro3,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",false,0)
+global.fntRetro3thin = font_add_sprite_ext(sprfontRetro3,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",true,4)
+
+//font_enable_effects(fntOpenSansGlow,true,{glowEnable: true, glowEnd:16,glowColour: c_red});
+font_enable_effects(fntOpenSansGlow, true, {
+    dropShadowEnable: true,
+    dropShadowSoftness: 20,
+    dropShadowOffsetX: 4,
+    dropShadowOffsetY: 4,
+    dropShadowAlpha: 1,
+    outlineEnable: true,
+    outlineDistance: 2,
+    outlineColour: c_black,
+    glowEnable: true,
+    glowEnd: 6,
+    glowColour: c_red,
+    glowAlpha: 4
+});
+
+
 
 global.ONE = [
     [1,6], [2,1], [2,6], [3,0], [3,1], [3,2], [3,3], [3,4], [3,5], [3,6],
@@ -327,7 +343,3 @@ global.charQ = [
     [6,0],[6,1],[6,2],[6,3],[6,4],[6,5],[6,6],
     [6,7],[7,7]
 ];
-
-createtextsurfaces()
-
-}

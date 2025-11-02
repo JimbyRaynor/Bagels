@@ -1,0 +1,18 @@
+Modify the HTML Page Background
+GameMaker’s HTML5 export wraps your game in an HTML page. To make the page background black:
+
+Locate the exported HTML file (e.g., index.html).
+
+Open it in a text editor.
+
+Add this CSS inside the <head> section or in a <style> tag:
+
+html
+<style>
+  body {
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+  }
+</style>
+This ensures the entire browser window (outside the canvas) is also black.

@@ -108,15 +108,37 @@ function ColourText(xloc, ys, mytext, colour, charwidth,charsize,solid)
 
 function printscreen()
 {
-	   var startline = 0
-	   linestoprint = ds_list_size(global.screentext)
-	   if (linestoprint > 19)
-	   {
-		   startline =  linestoprint - 19
-	   }
-	    for (var i = startline; i < linestoprint; i++) 
-		{
-			ColourText(20,100+(i-startline)*30,ds_list_find_value(global.screentext, i),#98FB98,26,3,false);
-		}
+	  draw_set_color(#98FB98);
+	  // create surface in a draw event : Look at ObjGameInit
+	  draw_set_font(global.fntRetro3);
+	  if (surface_exists(global.retroscreensurface))
+       {
+	     surface_set_target(global.retroscreensurface);
+	     draw_clear_alpha(c_black, 0);  // clear screen
+	      var startline = 0
+	      linestoprint = ds_list_size(global.screentext)
+	      if (linestoprint > 18)
+	      {
+		   startline =  linestoprint - 18
+	      }
+		  draw_set_font(global.fntRetro3);
+	      for (var i = startline; i < linestoprint; i++) 
+		 {
+		    	//ColourText(0,(i-startline)*30,ds_list_find_value(global.screentext, i),#98FB98,26,3,false);\
+			   draw_text(0,(i-startline)*30,ds_list_find_value(global.screentext, i) );
+		 }
+ 	    surface_reset_target();
+       }
+}
+
+
+function printinputtext()
+{
+  ColourText(700,330,global.inputtext,c_white,48,6,false);
+}
+
+function addtext(mytext)
+{
+	ds_list_add(global.screentext, mytext);
 }
 
