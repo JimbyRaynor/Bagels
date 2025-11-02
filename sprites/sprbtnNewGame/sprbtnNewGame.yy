@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprbtnNewGame",
   "bboxMode":0,
   "bbox_bottom":52,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e26994ad-2ab9-47fd-9c23-f39b930cf1dd","name":"e26994ad-2ab9-47fd-9c23-f39b930cf1dd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e26994ad-2ab9-47fd-9c23-f39b930cf1dd","name":"e26994ad-2ab9-47fd-9c23-f39b930cf1dd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
