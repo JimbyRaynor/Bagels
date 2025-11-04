@@ -1,11 +1,30 @@
-// All Scripts like GlobalVar are executed before anything else in the game
+// All Scripts like GlobalVar are executed before any objects/rooms in the game
+
+global.fntRetro3 = font_add_sprite_ext(sprfontRetro3,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.,:+*?()=",false,0)
+global.fntRetro3thin = font_add_sprite_ext(sprfontRetro3,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.,:+*?()=",true,4)
+
+global.fntRetro4 = font_add_sprite_ext(sprfontRetro4,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",false,0)
+global.fntRetro4thin = font_add_sprite_ext(sprfontRetro4,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",true,4)
+
+global.fntRetro5 = font_add_sprite_ext(sprfontRetro5,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",false,0)
+global.fntRetro5thin = font_add_sprite_ext(sprfontRetro5,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",true,4)
+
+global.fntRetro6 = font_add_sprite_ext(sprfontRetro6,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",false,0)
+global.fntRetro6thin = font_add_sprite_ext(sprfontRetro6,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",true,4)
 
 randomize(); // randomize seed so that we get different random numbers each time we start the game
 
-global.scrolltext = "                                             Originally written in basic in the early 1970s by Diane Resek and Pete Rowe at the Lawrence Hall of Science, Berkeley, California. "	
-global.scrolltext += "Adapted From the book 101 Basic Games, Creative Computing,1973, David H. Ahl."
-global.scrolltext = string_upper(global.scrolltext)
 
+global.scrolltext = "                                           Originally written in basic in the early 1970s by Diane Resek and Pete Rowe at the Lawrence Hall of Science, Berkeley, California. "	
+global.scrolltext += "Adapted From the book 101 Basic Games, Creative Computing, 1973, David H. Ahl."
+global.scrolltext = string_upper(global.scrolltext)
+global.scrolltextwidth = 4524+42*24 // string_width(global.scrolltext) does NOT work in HTML5 for my retro sprite font (proportional).
+                                                      // 42 spaces
+draw_set_font(global.fntRetro3thin);
+//global.scrolltextwidth = string_width(global.scrolltext);   // width in pixels  (NOT for HTML5)
+
+//show_error("scroll text width = "+string(global.scrolltextwidth),false); // HTML debug but can use show_message now
+//show_message("scroll text width = "+string(global.scrolltextwidth));  //  use Windows to find and hard code width
 
 global.scrollsurface = -1 // scrolling text
 // create this surface in draw event of ObjGameInit
@@ -27,8 +46,7 @@ global.inputcolour = c_gray
 global.gameover = false;
 global.errorRepeats = false;
 
-global.fntRetro3 = font_add_sprite_ext(sprfontRetro3,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",false,0)
-global.fntRetro3thin = font_add_sprite_ext(sprfontRetro3,"ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890%.:+*?()=",true,4)
+
 
 //font_enable_effects(fntOpenSansGlow,true,{glowEnable: true, glowEnd:16,glowColour: c_red});
 font_enable_effects(fntOpenSansGlow, true, {

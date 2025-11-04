@@ -1,0 +1,1 @@
+ColourText(300,30,"Settings",#98FB98,56,8,false);   // Very large text (size 8 with 56 pixels between letters)

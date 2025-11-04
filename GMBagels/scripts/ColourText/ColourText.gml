@@ -124,7 +124,6 @@ function printscreen()
 		  draw_set_font(global.fntRetro3);
 	      for (var i = startline; i < linestoprint; i++) 
 		 {
-		    	//ColourText(0,(i-startline)*30,ds_list_find_value(global.screentext, i),#98FB98,26,3,false);\
 			   draw_text(0,(i-startline)*30,ds_list_find_value(global.screentext, i) );
 		 }
  	    surface_reset_target();
@@ -134,7 +133,9 @@ function printscreen()
 
 function printinputtext()
 {
-  ColourText(700,330,global.inputtext,c_white,48,6,false);
+ draw_set_font(global.fntRetro6);
+ draw_set_color(c_white);
+ draw_text(x+33,y+38,global.inputtext)
 }
 
 function addtext(mytext)

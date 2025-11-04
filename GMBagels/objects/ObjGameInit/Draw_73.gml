@@ -9,7 +9,7 @@ if (!surface_exists(global.retroscreensurface))
 	  
 if (!surface_exists(global.scrollsurface))
 {
-   global.scrollsurface = surface_create(string_length(global.scrolltext)*24	, 50);
+   global.scrollsurface = surface_create(global.scrolltextwidth	, 50);
    //show_debug_message(surface_get_width(global.scrollsurface))
 	surface_set_target(global.scrollsurface);
 	draw_set_halign(fa_left);
