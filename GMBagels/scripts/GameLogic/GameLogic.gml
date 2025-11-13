@@ -88,20 +88,24 @@ for (var j = 1; j <= 2; j++)
             if (c == 0 and d == 0)
             {
                outputtext = "BAGELS"
+			   QueueSound(sndBagels);
             }
             for (var j = 1; j <= c; j++)
             {
                 outputtext = outputtext +"PICO "
+				QueueSound(sndPico);
             }
             for (var j = 1; j <= d; j++)
             {
                outputtext = outputtext + "FERMI ";
+			   QueueSound(sndFermi2);
             }
 			 addtext( global.inputtext + ":"+outputtext)
 			if (d ==  3)    // d == 3
             {
                 addtext("YOU GOT IT")
 				addtext("IN "+string(global.guessnumber)+ " GUESSES.")
+				//QueueSound(sndVictory);
 				global.gameover = true;
 				global.gamenumber++;
 				 global.totalguesses++;
@@ -113,6 +117,7 @@ for (var j = 1; j <= 2; j++)
 function EnterNumber(numstr)
 {
       if (global.gameover == true) {return}
+	  audio_play_sound(sndKeypad_01, 1, false);
       if (string_length(global.inputtext) == 3)
 	   { global.inputtext = "" }
 	 global.inputcolour = #98FB98

@@ -1,0 +1,2 @@
+SoundQueue = [];
+CurrentSound = -1;

@@ -32,6 +32,9 @@ global.scrollsurface = -1 // scrolling text
 global.retroscreensurface = -1 // dynamic text display
 // create this surface in draw event of ObjGameInit	
 		
+		
+global.targetwidth = 1600;
+global.targetheight = 900;   // Screen dimensions
 global.scroll_x  = 0
 global.screentext = ds_list_create();
 global.inputtext = ""

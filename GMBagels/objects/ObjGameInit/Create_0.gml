@@ -6,3 +6,7 @@ LoadState(); // defined in script GameGeneral
 GameLogicStart(); // defined in script GameLogic
 // start the game
 
+
+ClickTime = 0;
+DoubleClickThreshold = 250;
+
